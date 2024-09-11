@@ -1,0 +1,409 @@
+.car-showroom-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.car-names-slider {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Daha fazla araba ismi göstermek için genişliği artırabilirsin */
+  z-index: 10;
+}
+
+.car-showroom-container .splide__slide {
+  position: relative;
+  min-width: 20%; /* Her bir ismin genişliğini ayarlayın */
+  flex: 0 0 calc(100% / 4.6); /* Slide genişliğini 4.6 birime böler */
+}
+
+.red-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e30613;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.black-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3); /* Opaklığı düşürülmüş beyaz */
+  z-index: -1;
+}
+
+.car-showroom-container .splide__slide.active .red-underline {
+  opacity: 1;
+}
+
+.car-name {
+  font-family: "Circular", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.car-name.active {
+  color: #fff;
+  opacity: 1;
+}
+
+.showroom-section {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: 1rem;
+}
+
+.showroom-title {
+  font-size: 2.75rem;
+  color: #fff;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 600;
+  letter-spacing: 7px;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid;
+  background: transparent;
+  color: #fff;
+  font-size: 1.125rem;
+  cursor: pointer;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 500;
+  position: relative; /* Animasyon için gerekli */
+  overflow: hidden;
+  transition: color 0.3s ease; /* Geçiş efekti */
+  z-index: 1;
+}
+
+.explore-car {
+  border-color: #fff;
+  width: 200px;
+}
+
+.discover-all {
+  border-color: #e30613;
+  width: 220px;
+}
+
+/* Buton hover efektleri */
+.explore-car::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: transform 0.4s ease; /* Geçiş efekti */
+  transform: translateY(100%); /* Başlangıçta görünmez */
+  z-index: -1; /* Butonun arkasında kalır */
+}
+
+.explore-car:hover::before {
+  transform: translateY(
+    0
+  ); /* Hover durumunda arka planın yukarı çıkmasını sağlar */
+}
+
+.explore-car:hover {
+  color: black;
+}
+
+.discover-all::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e30613;
+  transition: transform 0.4s ease;
+  transform: translateY(100%);
+  z-index: -1;
+}
+
+.discover-all:hover::before {
+  transform: translateY(0);
+}
+
+.discover-all:hover {
+  color: white;
+}
+
+.car-showroom-container .car-image-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.car-showroom-container .car-details-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.car-showroom-container .car-details-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.car-showroom-container .car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(40%) contrast(90%);
+}
+
+.car-showroom-container .car-name-large {
+  position: absolute;
+  bottom: 11%;
+  left: 5%;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Russo", sans-serif;
+  font-weight: 500;
+  letter-spacing: 6px;
+}
+
+.car-showroom-container .car-details {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  color: #fff;
+}
+
+.car-showroom-container .car-info {
+  gap: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.car-showroom-container .car-info img {
+  width: 60px;
+  filter: brightness(0) invert(1);
+}
+
+.car-showroom-container .info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.car-showroom-container .info-title {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: "Circular", sans-serif;
+  font-weight: 400;
+  font-size: 1.063rem;
+}
+
+.car-showroom-container .info-value {
+  display: block;
+  margin-top: 0.25rem;
+  font-family: "Russo", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.car-showroom-container .car-image-section::before,
+.car-showroom-container .car-image-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Gradient rengi */
+  z-index: 1; /* Gradientlerin resmin üstünde görünmesi için */
+}
+
+.car-showroom-container .car-image-section::before {
+  top: 0;
+  height: 20%; /* Üst gradient yüksekliği */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    transparent
+  ); /* Üst gradient */
+}
+
+.car-showroom-container .car-image-section::after {
+  bottom: 0;
+  height: 15%; /* Alt gradient yüksekliği */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    transparent
+  ); /* Alt gradient */
+}
+
+/* Genel Responsive Ayarları */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .car-showroom-container {
+    height: 60vh;
+  }
+
+  .showroom-section {
+    top: 20%;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .showroom-title {
+    font-size: 2rem;
+  }
+
+  .car-name-large,
+  .car-details {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    left: 0;
+    color: #fff;
+  }
+
+  .car-showroom-container .splide__slide {
+    min-width: 20%;
+    flex: 0 0 calc(100% / 3.6);
+  }
+
+  .car-showroom-container .car-name-large {
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-showroom-container {
+    height: 40vh;
+  }
+
+  .showroom-section {
+    top: auto;
+    bottom: 22%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .showroom-title {
+    display: none;
+  }
+
+  .button.discover-all {
+    display: none;
+  }
+
+  .explore-car {
+    margin: 0;
+    font-size: 15px;
+    padding: 10px 10px;
+    position: absolute;
+    z-index: 9;
+    width: 330px;
+  }
+
+  .car-showroom-container .splide__slide {
+    min-width: 30%;
+    flex: 0 0 calc(100% / 1.6);
+  }
+
+  .car-image {
+    object-fit: cover; /* Resmin tamamen görünmesini sağlar */
+    object-position: center; /* Resmi ortalar */
+  }
+
+  .car-showroom-container .car-name-large {
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+    letter-spacing: 6px;
+  }
+
+  .car-showroom-container .car-details {
+    gap: 10px;
+    text-align: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 30%;
+    color: #fff;
+    right: auto;
+  }
+
+  .car-showroom-container .car-info img {
+    width: 30px;
+  }
+
+  .car-showroom-container .info-title {
+    font-size: 16px;
+  }
+
+  .car-showroom-container .info-value {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 376px) {
+  .car-name {
+    font-size: 1rem;
+  }
+
+  .car-showroom-container .car-details {
+    gap: 5px;
+  }
+
+  .car-showroom-container .info-value {
+    font-size: 12px;
+  }
+
+  .explore-car {
+    width: 300px;
+  }
+
+  .car-name {
+    font-size: 14px;
+  }
+}

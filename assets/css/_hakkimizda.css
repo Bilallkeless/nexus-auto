@@ -1,0 +1,572 @@
+/* Genel Container Ayarları */
+.about-section {
+  display: grid;
+  padding: 1.875rem 4.375rem;
+  background: linear-gradient(to bottom, #000000, #1a0101, #000000);
+  overflow: hidden;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Splide.js Slayt Ayarları */
+#car-slider {
+  position: relative; /* Zoom butonu için gerekli */
+  max-width: 100%; /* Slayt alanının genişliğini ayarlar */
+}
+
+#car-slider .splide__slide {
+  overflow: hidden;
+}
+
+#car-slider .splide__slide img {
+  width: 100%;
+  height: 700px; /* Resmin yüksekliğini sabitle */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.splide__slide:hover img {
+  transform: scale(1.1); /* Hover durumunda resmi %110 büyütür */
+}
+
+/* Sağ Kısım: Yazı */
+.car-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e1e1e1;
+  padding: 0 0 0 4.688rem;
+}
+
+.car-text-content h2 {
+  margin: 0 0 1.875rem 0;
+  font-size: 2.5rem;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 600;
+  letter-spacing: 7px;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.car-text-content p {
+  font-size: 1.313rem;
+  font-family: "Circular", sans-serif;
+  font-weight: 300;
+  margin: 0 0 1.875rem 0;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* Yeni Buton için Stil */
+.discover-button {
+  background: transparent;
+  border: 1px solid #e30613;
+  color: white;
+  font-size: 1.063rem;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 500;
+  padding: 0.813rem 1.875rem;
+  cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease; /* Geçiş efekti */
+  z-index: 1;
+}
+
+/* Buton hover efektleri */
+.discover-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e30613;
+  transition: transform 0.4s ease; /* Geçiş efekti */
+  transform: translateY(100%);
+  z-index: -1;
+}
+
+.discover-button:hover::before {
+  transform: translateY(
+    0
+  ); /* Hover durumunda arka planın yukarı çıkmasını sağlar */
+}
+
+.discover-button:hover {
+  color: white; /* Hover durumunda yazı renginin beyaz kalmasını sağlar */
+}
+
+/* Büyütme butonu */
+.splide__slide:hover .zoom-button {
+  display: flex; /* Hover yapıldığında buton görünsün */
+}
+
+.zoom-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8) rotate(0deg); /* Başlangıçta küçük ve dönmemiş */
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #e30613;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Hover durumunda butonun görünmesi ve hafif döndürülmesi */
+.splide__slide:hover .zoom-button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(10deg); /* Hafif döndürme efekti */
+}
+
+/* Butonun hover animasyonu */
+@keyframes rotateIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8) rotate(-90deg); /* Başlangıçta yarım tur dönerken görünür */
+    opacity: 0; /* Başlangıçta görünmez */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg); /* Normal duruma döner */
+    opacity: 1; /* Tamamen görünür */
+  }
+}
+
+/* Buton hover durumunda animasyonu uygula */
+.splide__slide:hover .zoom-button {
+  animation: rotateIn 0.5s forwards; /* Animasyon süresi ve ileriye dönük uygulama */
+}
+
+/* Butonun hover çıkış animasyonu */
+@keyframes rotateOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg); /* Başlangıçta normal durumda */
+    opacity: 1; /* Başlangıçta tamamen görünür */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8) rotate(90deg); /* Çıkarken yarım tur döner */
+    opacity: 0; /* Çıkarken görünmez olur */
+  }
+}
+
+/* Butonun hover'dan çıkış animasyonu */
+.splide__slide .zoom-button {
+  animation: rotateOut 0.5s forwards; /* Animasyon süresi ve ileriye dönük uygulama */
+}
+
+.zoom-button i {
+  font-size: 18px;
+}
+
+/* Butonlar için Stil */
+/* Sol kısım: Önceki buton (sağdan sola dolma) */
+.splide__arrow--prev {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px !important;
+  left: 30px !important;
+}
+
+.splide__arrow--prev:hover {
+  border: 1px solid #e30613 !important;
+}
+
+.splide__arrow--prev::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e30613;
+  transform: translateX(110%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.splide__arrow--prev:hover::before {
+  transform: translateX(0); /* Hover durumunda dolma efekti */
+}
+
+/* Sağ kısım: Sonraki buton (soldan sağa dolma) */
+.splide__arrow--next {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+  width: 55px !important;
+  height: 55px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px !important;
+  right: 30px !important;
+}
+
+.splide__arrow--next:hover {
+  border: 1px solid #e30613 !important;
+}
+
+.splide__arrow--next::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e30613;
+  transform: translateX(-110%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.splide__arrow--next:hover::before {
+  transform: translateX(0);
+}
+
+/* İkonlar için Stil */
+.splide__arrow i {
+  font-size: 24px !important;
+}
+
+.splide__arrow svg {
+  fill: white !important;
+}
+
+/* Modal Stil Ayarları */
+.modal {
+  display: none; /* Başlangıçta görünmez */
+  position: fixed; /* Ekrana sabit */
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Karartılmış arka plan */
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 70%; /* Resim genişliği */
+  max-height: 80%; /* Resim yüksekliği */
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal için ok butonları */
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.modal-arrow.left {
+  left: 10px;
+}
+
+.modal-arrow.right {
+  right: 10px;
+}
+
+.modal-arrow:hover {
+  color: #bbb;
+}
+
+/* Radarlı Animasyonlar */
+.customer-container {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  justify-content: space-around; /* Aralarındaki mesafeyi artır */
+  margin-top: 4.375rem;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  flex: 1; /* Her elemanın eşit genişlikte olmasını sağlar */
+}
+
+.icon-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.icon-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60px;
+  filter: brightness(0) invert(0.6);
+}
+
+.icon {
+  font-size: 48px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.border-circle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: border-color 0.5s ease; /* Hover animasyonu için */
+}
+
+.icon-container:hover .border-circle {
+  border-color: #e30613; /* Hover durumunda border rengi */
+}
+
+.radar-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  animation: radarAnimation 3s linear infinite; /* Animasyon süresi 3s ve sonsuz döngü */
+  z-index: 0; /* Çemberin arkasında kalmasını sağlar */
+  box-sizing: border-box; /* Boyutlandırmayı border'ı da dahil ederek yapar */
+}
+
+.radar-effect:nth-child(1) {
+  animation-delay: 0s; /* İlk radar efekti için gecikme */
+}
+
+.radar-effect:nth-child(2) {
+  animation-delay: 1s; /* İkinci radar efekti için gecikme */
+}
+
+.radar-effect:nth-child(3) {
+  animation-delay: 2s; /* Üçüncü radar efekti için gecikme */
+}
+
+@keyframes radarAnimation {
+  0% {
+    transform: scale(1); /* Başlangıçta küçük */
+    opacity: 0.3; /* Başlangıçta biraz opaklık */
+  }
+  50% {
+    transform: scale(2.2); /* Orta noktada yayılma */
+    opacity: 0; /* Orta noktada tamamen görünmez */
+  }
+  100% {
+    transform: scale(2.5); /* Son noktada daha geniş yayılma */
+    opacity: 0; /* Son noktada tamamen görünmez */
+  }
+}
+
+.customer h3 {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Russo", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: center;
+  min-height: 50px;
+  width: 160px;
+}
+
+/* Tablet görünümü için (genişlik 768px - 1024px arası) */
+@media (max-width: 1024px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* Araba slaytını küçültür */
+  #car-slider {
+    flex: 0 0 100%; /* Slayt alanını %100 genişliğe ayarlar */
+    margin-bottom: 20px; /* Alt kenar boşluğu ekler */
+  }
+
+  #car-slider .splide__slide img {
+    height: 600px;
+  }
+
+  /* Sağdaki yazı kısmı için düzenlemeler */
+  .car-text-content {
+    padding: 0;
+    text-align: left;
+  }
+
+  .car-text-content h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .car-text-content p {
+    font-size: 1rem; /* Paragraf yazı boyutunu küçültür */
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .customer-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .customer {
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .customer h3 {
+    min-height: 0px;
+    text-align: left;
+    margin: 0 0 0 15px;
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-container img {
+    width: 40px;
+  }
+}
+
+/* Mobil görünümü için (genişlik 767px ve altı) */
+@media (max-width: 767px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 10px 30px;
+  }
+
+  #car-slider {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+
+  #car-slider .splide__slide img {
+    height: 250px;
+  }
+
+  .car-text-content {
+    padding: 0;
+    text-align: left;
+  }
+
+  .car-text-content h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    letter-spacing: 0;
+  }
+
+  .car-text-content p {
+    font-size: 0.875rem;
+    margin: 0 auto 15px auto;
+    max-width: 100%;
+  }
+
+  .discover-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .customer-container {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    margin-bottom: 0px;
+  }
+
+  .customer {
+    margin-bottom: 55px;
+    margin: 0 0 60px 0;
+  }
+
+  .zoom-button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .splide__arrow--prev,
+  .splide__arrow--next {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .icon-container img {
+    width: 35px;
+  }
+
+  .icon-container {
+    width: 55px;
+    height: 55px;
+  }
+
+  .customer h3 {
+    margin: 0 0 0 10px;
+    font-size: 12px;
+  }
+}

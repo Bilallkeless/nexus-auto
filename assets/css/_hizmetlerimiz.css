@@ -1,0 +1,253 @@
+/* Hizmetlerimiz Bölümü */
+.services-section {
+  position: relative;
+  background: url("../img/hizmetlerimiz/optical-fiber-background.jpg") no-repeat
+    center center;
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-section h3,
+.services-section p {
+  font-family: "Circular", sans-serif;
+  font-weight: 300;
+}
+
+/* Üst Gradient Efekti */
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Üst gradient yüksekliği */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.9),
+    transparent
+  ); /* Üst gradient */
+  z-index: 1; /* Arka planda kalsın */
+}
+
+/* Alt Gradient Efekti */
+.services-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Alt gradient yüksekliği */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    transparent
+  ); /* Alt gradient */
+  z-index: 1; /* Arka planda kalsın */
+}
+
+/* İçerikler */
+.section-title {
+  color: #e8e8e8;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 600;
+  letter-spacing: 7px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.service-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+.service-image {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.15);
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: background 0.5s ease;
+}
+
+.service-card:hover .service-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.service-info {
+  padding: 40px 30px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  transition: opacity 0.5s ease;
+}
+
+.service-info h3 {
+  font-size: 28px;
+  color: #e8e8e8;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-info p {
+  font-size: 18px;
+  color: #d1d1d1;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.service-link {
+  font-size: 16px;
+  font-family: "Blackthorns", sans-serif;
+  font-weight: 500;
+  color: #e8e8e8;
+  letter-spacing: 1.5px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.service-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #e8e8e8;
+  transition: width 0.4s ease;
+}
+
+.service-link:hover::before {
+  width: 100%;
+}
+
+/* Hizmetlerimiz Bölümü - Responsive */
+@media (max-width: 1200px) {
+  /* Tablet ve daha küçük ekranlar için düzenleme */
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .service-info h3 {
+    font-size: 26px;
+  }
+
+  .service-info p {
+    font-size: 16px;
+  }
+
+  .service-info {
+    padding: 30px 20px;
+  }
+
+  .service-card {
+    border-radius: 15px;
+  }
+
+  .service-image {
+    height: 220px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobil ekranlar için düzenleme */
+  .services-container {
+    grid-template-columns: 1fr; /* Tüm hizmetler tek sütunda */
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  .service-info h3 {
+    font-size: 22px;
+  }
+
+  .service-info p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .service-info {
+    padding: 20px 15px;
+  }
+
+  .service-image {
+    height: 200px;
+  }
+
+  .service-card {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Küçük mobil cihazlar için düzenleme */
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .service-info h3 {
+    font-size: 20px;
+  }
+
+  .service-info p {
+    font-size: 14px;
+  }
+
+  .service-link {
+    font-size: 14px;
+  }
+
+  .service-image {
+    height: 180px;
+  }
+
+  .service-info {
+    padding: 15px 10px;
+  }
+}

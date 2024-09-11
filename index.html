@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Auto</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/nexuslogo.png"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Splide.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header">
+        <div class="header-navbar">
+          <div class="header-logo">
+            <a href="/">
+              <img src="assets/img/nexuslogo.png" alt="nexus-logo" />
+            </a>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li><a href="#">HAKKIMIZDA</a></li>
+              <li><a href="#">ARAÇLARIMIZ</a></li>
+              <li><a href="#">HİZMETLERİMİZ</a></li>
+              <li><a href="#">MARKALARIMIZ</a></li>
+            </ul>
+          </div>
+
+          <div class="right-field-header">
+            <a href="#" class="contact-button">Bize Ulaşın</a>
+            <div class="hamburger-menu" id="hamburger-menu">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="mobile-menu">
+        <ul>
+          <li><a href="#">Hakkımızda</a></li>
+          <li><a href="#">Araçlarımız</a></li>
+          <li><a href="#">Hizmetlerimiz</a></li>
+          <li><a href="#">Markalarımız</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+      <a href="#" class="scroll-to-top-link">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+      <a href="#" target="_blank" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <section class="video-background">
+      <video autoplay muted loop class="background-video">
+        <source src="assets/video/nexuspromo.mp4" type="video/mp4" />
+        Tarayıcınız video öğesini desteklemiyor.
+      </video>
+      <div class="overlay">
+        <div class="content">
+          <h1 class="reveal-h1">ARABA TUTKUNUZU KEŞFEDİN</h1>
+          <p class="reveal-p">
+            Zarafet ve Performansı Bir Araya Getiren Araçlar
+          </p>
+          <div class="button-container reveal-btn">
+            <button class="glow-button">Showroom Görünümü</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-section">
+      <!-- Sol kısım: Araba Resim Slaytı -->
+      <div id="car-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="assets/img/hakkimizda/showroom.jpg" alt="Araba 1" />
+              <div class="zoom-button">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <img src="assets/img/hakkimizda/showroom-2.jpg" alt="Araba 2" />
+              <div class="zoom-button">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <img src="assets/img/hakkimizda/showroom-3.jpg" alt="Araba 3" />
+              <div class="zoom-button">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sağ kısım: Yazı -->
+      <div class="car-text-content">
+        <h2>SÜRÜŞÜNÜZDE KALİTEYİ KEŞFEDİN</h2>
+        <p>
+          Showroom'umuzda yalnızca düşük kilometreli ve yüksek sınıf araçları
+          sunuyoruz. Her araç, teknik ve estetik açıdan titizlikle kontrol
+          edildikten sonra galerimize dahil edilir.
+        </p>
+        <button class="discover-button">Bizi Tanıyın</button>
+        <div class="customer-container">
+          <div class="customer">
+            <div class="icon-container">
+              <img
+                src="assets/icon/satisfaction.png"
+                alt="satisfaction"
+                draggable="false"
+              />
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="border-circle"></div>
+            </div>
+            <h3>Müşteri Memnuniyeti</h3>
+          </div>
+
+          <div class="customer">
+            <div class="icon-container">
+              <img
+                src="assets/icon/lightbulb.png"
+                alt="lightbulb"
+                draggable="false"
+              />
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="border-circle"></div>
+            </div>
+            <h3>Yenilikçi Ürünler</h3>
+          </div>
+
+          <div class="customer">
+            <div class="icon-container">
+              <img
+                src="assets/icon/professional-services.png"
+                alt="professional-services"
+                draggable="false"
+              />
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="radar-effect"></div>
+              <div class="border-circle"></div>
+            </div>
+            <h3>Profesyonel Servis</h3>
+          </div>
+        </div>
+      </div>
+      <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image" />
+      </div>
+    </div>
+
+    <div class="brands-section">
+      <h2 class="brands-title">
+        <span class="subtitle">Kalitenin Öncüsü</span>
+        <span class="title">Markalarımız</span>
+      </h2>
+      <div class="splide" id="brands-slider">
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/ferrarilogo.png" alt="Marka 1" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/bmwlogo.png" alt="Marka 2" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/lambologo.png" alt="Marka 3" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/mercedeslogo.png" alt="Marka 4" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img
+                  src="assets/img/car-logo/chevroletlogo.png"
+                  alt="Marka 5"
+                />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/nissanlogo.png" alt="Marka 6" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img src="assets/img/car-logo/cherylogo.png" alt="Marka 7" />
+              </div>
+            </div>
+            <div class="splide__slide">
+              <div class="brand-logo">
+                <img
+                  src="assets/img/car-logo/volkswagenlogo.png"
+                  alt="Marka 8"
+                />
+              </div>
+            </div>
+            <!-- Diğer logo alanları aynı yapıda devam edecek -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="car-showroom-container">
+      <!-- Car Names -->
+      <div class="car-names-slider splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="1">Mercedes Maybach S560</h2>
+              <div class="red-underline"></div>
+            </li>
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="2">BMW 7.30 M Sport</h2>
+              <div class="red-underline"></div>
+            </li>
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="3">Range Rover Vogue</h2>
+              <div class="red-underline"></div>
+            </li>
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="4">VW Golf 1.0 R Line</h2>
+              <div class="red-underline"></div>
+            </li>
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="5">Mercedes C200 4 Matic</h2>
+              <div class="red-underline"></div>
+            </li>
+            <li class="splide__slide">
+              <h2 class="car-name" data-car="6">Porsche Taycan 4S</h2>
+              <div class="red-underline"></div>
+            </li>
+            <!-- Daha fazla araba ismi eklenebilir -->
+          </ul>
+        </div>
+        <div class="black-line"></div>
+      </div>
+
+      <!-- Showroom Section -->
+      <div class="showroom-section">
+        <span class="showroom-title">SHOWROOM</span>
+        <button class="button explore-car">Arabayı İncele</button>
+        <button class="button discover-all">Tümünü Keşfedin</button>
+      </div>
+
+      <!-- Car Image and Details -->
+      <div class="car-image-section">
+        <!-- Araba 1 -->
+        <div class="car-details-container" data-car="1">
+          <img
+            src="assets/img/arabalarimiz/mercedes-maybach.jpg"
+            alt="Araba 1"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">Mercedes Maybach S560</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">200 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">400 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Otomatik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araba 2 -->
+        <div class="car-details-container" data-car="2" style="display: none">
+          <img
+            src="assets/img/arabalarimiz/bmw-sport.jpg"
+            alt="Araba 2"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">BMW 7.30 M Sport</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">150 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">350 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Manuel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araba 3 -->
+        <div class="car-details-container" data-car="3" style="display: none">
+          <img
+            src="assets/img/arabalarimiz/rangerover.jpg"
+            alt="Araba 3"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">Range Rover Vogue</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">180 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">380 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Otomatik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araba 4 -->
+        <div class="car-details-container" data-car="4" style="display: none">
+          <img
+            src="assets/img/arabalarimiz/vw-golf.jpg"
+            alt="Araba 4"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">VW Golf 1.0 R Line</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">180 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">380 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Otomatik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araba 5 -->
+        <div class="car-details-container" data-car="5" style="display: none">
+          <img
+            src="assets/img/arabalarimiz/mercedes-c200.jpg"
+            alt="Araba 5"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">Mercedes C200 4 Matic</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">180 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">380 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Otomatik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Araba 6 -->
+        <div class="car-details-container" data-car="6" style="display: none">
+          <img
+            src="assets/img/arabalarimiz/porsche.jpg"
+            alt="Araba 6"
+            class="car-image"
+            draggable="false"
+          />
+          <div class="car-name-large">Porsche Taycan 4S</div>
+          <div class="car-details">
+            <div class="car-info">
+              <img src="assets/icon/engine.png" alt="engine" />
+              <div class="info-text">
+                <span class="info-title">Güç</span>
+                <span class="info-value">180 kWh</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/route.png" alt="route" />
+              <div class="info-text">
+                <span class="info-title">Menzil</span>
+                <span class="info-value">380 km</span>
+              </div>
+            </div>
+            <div class="car-info">
+              <img src="assets/icon/transmission.png" alt="transmission" />
+              <div class="info-text">
+                <span class="info-title">Vites</span>
+                <span class="info-value">Otomatik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="hizmetlerimiz" class="services-section">
+      <h2 class="section-title">HİZMETLERİMİZ</h2>
+      <div class="services-container">
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="
+              background-image: url('assets/img/hizmetlerimiz/araba-kaplama.jpg');
+            "
+          ></div>
+          <div class="service-overlay"></div>
+          <div class="service-info">
+            <h3>ARAÇ KAPLAMA</h3>
+            <p>
+              Yüksek kaliteli araç kaplaması, aracınızı çizikler, taş darbeleri
+              ve güneş ışınlarına karşı korur, değer kaybını önler.
+            </p>
+            <a href="#" class="service-link">Daha Fazla Bilgi</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="
+              background-image: url('assets/img/hizmetlerimiz/seramik-kaplama.jpg');
+            "
+          ></div>
+          <div class="service-overlay"></div>
+          <div class="service-info">
+            <h3>SERAMİK KAPLAMA</h3>
+            <p>
+              Aracınızı fabrika çıkışındaki parlaklığına kavuşturmak için
+              profesyonel oto detaylandırma hizmeti sunuyoruz.
+            </p>
+            <a href="#" class="service-link">Daha Fazla Bilgi</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div
+            class="service-image"
+            style="
+              background-image: url('assets/img/hizmetlerimiz/arac-bakim.jpg');
+            "
+          ></div>
+          <div class="service-overlay"></div>
+          <div class="service-info">
+            <h3>ARAÇ BAKIM VE ONARIM</h3>
+            <p>
+              Aracınızın performansını artırmak ve ömrünü uzatmak için
+              profesyonel bakım ve onarım hizmeti sunuyoruz.
+            </p>
+            <a href="#" class="service-link">Daha Fazla Bilgi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="iletisim-section">
+      <div class="left-section">
+        <img
+          src="assets/img/iletisim/nexus-arabasi.png"
+          alt="Araba"
+          class="car-image"
+          draggable="false"
+        />
+      </div>
+      <div class="right-section">
+        <h1>HİZMETLERİMİZDEN YARARLANIN</h1>
+        <p>
+          Rotterdam, Hollanda ve Avrupa genelinde ikinci el araç alım satımında
+          sadece araçları değil, aynı zamanda kapsamlı bir hizmet yelpazesi
+          sunuyoruz.
+        </p>
+        <form class="contact-form">
+          <div class="form-group">
+            <select name="services" id="services">
+              <option value="" disabled selected>Hizmet Seçimi</option>
+              <option value="arac-kaplama">Araç Kaplama</option>
+              <option value="seramik-kaplama">Seramik Kaplama</option>
+              <option value="arac-bakim-onarim">Araç Bakım ve Onarım</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Ad Soyad" />
+            <input type="tel" name="phone" placeholder="Telefon" />
+          </div>
+          <input type="email" name="email" placeholder="E-posta" />
+          <textarea name="message" rows="5" placeholder="Mesaj"></textarea>
+          <button class="form-submit button" type="submit">Gönder</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="custom-footer">
+      <video autoplay muted loop class="footer-bg">
+        <source src="assets/video/footer-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2 class="footer-title">HİZMETLERİMİZ</h2>
+          <ul class="services-list">
+            <li><a href="#">Araç Kaplama</a></li>
+            <li><a href="#">Seramik Kaplama</a></li>
+            <li><a href="#">Araç Bakım ve Onarım</a></li>
+          </ul>
+          <div class="divider"></div>
+          <div class="social-icons">
+            <a href="#" class="social-icon linkedin">
+              <img
+                src="assets/linkedinlogo.png"
+                alt="LinkedIn"
+                draggable="false"
+              />
+            </a>
+            <a href="#" class="social-icon instagram">
+              <img
+                src="assets/instalogo.png"
+                alt="Instagram"
+                draggable="false"
+              />
+            </a>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <img
+                src="assets/icon/location.png"
+                alt="Konum"
+                draggable="false"
+              />
+              <p>
+                Lorem İpsum Mah. Lorem İpsum Sok. <br />
+                No:7 Kartal/İstanbul/Türkiye
+              </p>
+            </div>
+            <div class="contact-item">
+              <img
+                src="assets/icon/telephone.png"
+                alt="Telefon"
+                draggable="false"
+              />
+              <p>+90 999 999 99 99</p>
+            </div>
+            <div class="contact-item">
+              <img
+                src="assets/icon/email.png"
+                alt="E-posta"
+                draggable="false"
+              />
+              <p>info@nexusauto.com.tr</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-center">
+          <img
+            src="assets/img/nexuslogo.png"
+            alt="Nexus Logo"
+            class="footer-logo"
+            draggable="false"
+          />
+        </div>
+
+        <div class="footer-right">
+          <h2 class="footer-title">HIZLI MENÜ</h2>
+          <ul class="quick-menu">
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">Araçlarımız</a></li>
+            <li><a href="#">İletişim</a></li>
+            <li><a href="#">Aydınlatma Metni</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="assets/js/scrollreveal.js"></script>
+    <script src="assets/js/scroll-to-top.js"></script>
+    <script src="assets/js/hakkimizda.js"></script>
+    <script src="assets/js/hamburger-menu.js"></script>
+    <script src="assets/js/markalarimiz.js"></script>
+    <script src="assets/js/header-animation.js"></script>
+    <script src="assets/js/arabalarimiz.js"></script>
+    <script src="assets/js/hizmetlerimiz.js"></script>
+  </body>
+</html>
