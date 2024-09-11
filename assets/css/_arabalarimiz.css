@@ -318,7 +318,7 @@
 
 @media (max-width: 768px) {
   .car-showroom-container {
-    height: 40vh;
+    height: 50vh;
   }
 
   .showroom-section {
@@ -386,7 +386,7 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 480px) {
   .car-name {
     font-size: 1rem;
   }

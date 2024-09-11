@@ -183,6 +183,12 @@
   color: #e30613;
 }
 
+.phone-link {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: default;
+}
+
 /* Tablet görünümü (768px ve yukarısı) */
 @media (max-width: 1024px) {
   .custom-footer {
